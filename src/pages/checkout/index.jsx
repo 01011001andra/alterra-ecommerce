@@ -1,5 +1,7 @@
 import React from "react";
+import { Layout } from "../layout";
+import "./styles.css";
 
 export default function Checkout() {
-  return <div>Checkout</div>;
+  return <Layout>Checkout</Layout>;
 }
