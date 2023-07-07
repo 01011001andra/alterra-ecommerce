@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "product": "typicode",
+      "title": "json-server",
+      "price": 120000
+    },
+    {
+      "id": 3,
+      "product": "typicode",
+      "title": "json-server",
+      "price": 120000
+    },
+    {
+      "id": 4,
+      "product": "typicode",
+      "title": "json-server",
+      "price": 120000
+    },
+    {
+      "id": 211,
+      "product": "asd",
+      "title": "json-asdssd",
+      "price": 120022200
+    }
+  ]
+}
