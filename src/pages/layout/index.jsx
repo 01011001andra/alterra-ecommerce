@@ -5,7 +5,7 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <div className="container-xxl py-4 ">{children}</div>
+      <div className="container-xxl py-4">{children}</div>
       <Footer />
     </>
   );
