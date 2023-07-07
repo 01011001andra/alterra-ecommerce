@@ -1,11 +1,5 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Home from "./pages/home";
-import Products from "./pages/products";
-import Login from "./pages/login";
-import Register from "./pages/register";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Checkout, Home, Login, Products, Register } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -24,11 +18,14 @@ const router = createBrowserRouter([
     path: "/register",
     element: <Register />,
   },
+  {
+    path: "/checkout",
+    element: <Checkout />,
+  },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />
-
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
