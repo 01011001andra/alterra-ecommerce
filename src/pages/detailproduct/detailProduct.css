@@ -1,0 +1,12 @@
+.btn-addToCart{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .btn-flying{
+        display: none;
+    }
+    .btn-addToCart{
+        display: block;
+    }
+}

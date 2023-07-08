@@ -4,7 +4,9 @@
       "id": 2,
       "name": "nike",
       "desc": "Unisex Sportswear Bucket Hat",
-      "url": "src/assets/market.png",
+
+      "url": "src/assets/topi.jpeg",
+
       "category": "topi",
       "price": 120000
     },
@@ -20,7 +22,8 @@
       "id": 4,
       "name": "Converse",
       "desc": "Chuck Taylor 70's - Hi",
-      "url": "src/assets/market.png",
+      "url": "src/assets/sepatu.jpeg",
+
       "category": "sepatu",
       "price": 100000
     },
