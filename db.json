@@ -2,26 +2,34 @@
   "products": [
     {
       "id": 2,
-      "product": "typicode",
-      "title": "json-server",
+      "name": "nike",
+      "desc": "Unisex Sportswear Bucket Hat",
+      "url": "src/assets/market.png",
+      "category": "topi",
       "price": 120000
     },
     {
       "id": 3,
-      "product": "typicode",
-      "title": "json-server",
-      "price": 120000
+      "name": "adidas",
+      "desc": "adicolor classics 3-stripes leggings",
+      "url": "src/assets/market.png",
+      "category": "celana",
+      "price": 220000
     },
     {
       "id": 4,
-      "product": "typicode",
-      "title": "json-server",
-      "price": 120000
+      "name": "Converse",
+      "desc": "Chuck Taylor 70's - Hi",
+      "url": "src/assets/market.png",
+      "category": "sepatu",
+      "price": 100000
     },
     {
       "id": 211,
-      "product": "asd",
-      "title": "json-asdssd",
+      "name": "TONIQUE",
+      "desc": "Osella Ladies Comme Solid Shirt Indigo",
+      "url": "src/assets/market.png",
+      "category": "baju",
       "price": 120022200
     }
   ]
