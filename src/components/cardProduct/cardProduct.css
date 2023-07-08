@@ -1,0 +1,8 @@
+.card-product {
+    cursor: pointer;
+    max-width: 15rem;
+}
+
+.card-body:hover {
+    background-color: aliceblue;
+}
