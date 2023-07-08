@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Layout } from "../layout";
 import { useParams } from "react-router-dom";
+import ImageDetail from "./ImageDetail";
 import gmb from "../../assets/sepatu.jpeg";
+import DescDetail from "./DescDetail";
+import ButtonAddToCart from "../../components/buttonToCart";
+import "./detailProduct.css"
 
 export default function DetailProduct() {
-  function formatRupiah(angka = 0) {
-    return angka.toLocaleString("id-ID", {
-      style: "currency",
-      currency: "IDR",
-    });
-  }
-
   let params = useParams();
 
   const [product, productSet] = useState({});
@@ -32,21 +29,16 @@ export default function DetailProduct() {
   return (
     <Layout>
       <div className="container">
-        <div className="row">
+        <div className="row row-gap-3">
           <div className="col-12 col-md-6 col-lg-8">
-            <img
-              src={gmb}
-              className="img-fluid rounded mx-auto d-block"
-              alt="..."
-            />
+            <ImageDetail image={product.url} />
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <h2 className="fw-normal m-0">{product.name}</h2>
-            <p className="">{product.desc}</p>
-            <p className="fs-2">
-              <strong> {formatRupiah(product.price)} </strong>
-            </p>
+            <DescDetail product={product} />
           </div>
+        </div>
+        <div className="position-sticky bottom-0 start-0 w-100 btn-flying">
+          <ButtonAddToCart text={"Tambahkan ke Keranjang"} />
         </div>
       </div>
     </Layout>
