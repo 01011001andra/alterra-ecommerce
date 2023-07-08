@@ -1,9 +1,3 @@
-.checkout {
-  display: flex;
-  gap: 30px;
-}
-
-.checkout_items {
-  width: 800px;
-  color: aqua;
+.cards {
+  background-color: #fbfbfb;
 }
