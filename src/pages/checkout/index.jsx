@@ -3,13 +3,14 @@ import { Layout } from "../layout";
 import { MdLocationOn } from "react-icons/md";
 import { PiBrandyFill } from "react-icons/pi";
 import "./styles.css";
+import SwiperProducts from "../../components/swiperProducts";
 
 export default function Checkout() {
   return (
     <Layout>
-      <div className="row justify-contenet-between">
+      <div className="row justify-contenet-between mb-5">
         <div className="checkout_items col-12 col-lg-7 d-flex flex-column gap-4">
-          <h1 className="fs-4 fw-bold">Tas</h1>
+          <h1 className="fs-4 fw-bold">Keranjang</h1>
           {/* ALAMAT */}
           <div className="d-flex gap-1 border border-danger p-3 rounded-3">
             <MdLocationOn size={35} />
@@ -35,6 +36,7 @@ export default function Checkout() {
         </div>
         <div className="checkout_price col-12 col-lg-4">2</div>
       </div>
+      <SwiperProducts />
     </Layout>
   );
 }

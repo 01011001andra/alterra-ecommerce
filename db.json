@@ -34,6 +34,24 @@
       "url": "src/assets/market.png",
       "category": "baju",
       "price": 120022200
+    },
+    {
+      "id": 5,
+      "name": "Converse",
+      "desc": "Chuck Taylor 70's - Hi",
+      "url": "src/assets/sepatu.jpeg",
+
+      "category": "sepatu",
+      "price": 100000
+    },
+    {
+      "id": 6,
+      "name": "Converse",
+      "desc": "Chuck Taylor 70's - Hi",
+      "url": "src/assets/sepatu.jpeg",
+
+      "category": "sepatu",
+      "price": 100000
     }
   ]
 }

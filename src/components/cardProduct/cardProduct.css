@@ -1,8 +1,9 @@
 .card-product {
-    cursor: pointer;
-    max-width: 15rem;
+  cursor: pointer;
+  max-width: 15rem;
+  width: 100%;
 }
 
 .card-body:hover {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
