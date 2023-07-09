@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Layout } from "../layout";
 import { MdLocationOn } from "react-icons/md";
 import { PiBrandyFill } from "react-icons/pi";
 import "./styles.css";
 import SwiperProducts from "../../components/swiperProducts";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../../store/slices/productSlice";
 
 export default function Checkout() {
+  const dispatch = useDispatch();
+  const { status, products, error } = useSelector((state) => state.products);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
   return (
     <Layout>
       <div className="row justify-contenet-between mb-5">
