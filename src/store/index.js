@@ -1,4 +1,4 @@
-import { applyMiddleware, configureStore, createStore } from "@reduxjs/toolkit";
+import { applyMiddleware, configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import productsReducer from "./slices/productSlice";

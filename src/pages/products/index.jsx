@@ -2,26 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Layout } from "../layout";
 import CardProduct from "../../components/cardProduct";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../../store/slices/productSlice";
 
 export default function Products() {
-  const [products, productsSet] = useState([]);
-
-  async function getProducts() {
-    try {
-      const res = await fetch("http://localhost:3000/products");
-      const jsonData = await res.json();
-      productsSet(jsonData);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  const listOfTopi = products.filter((e) => e.category === "topi");
-  const listOfPants = products.filter((e) => e.category === "celana");
+  const dispatch = useDispatch();
+  const { status, products, error } = useSelector((state) => state.products);
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
   return (
     <Layout>

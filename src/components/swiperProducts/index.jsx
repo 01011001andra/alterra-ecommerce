@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { fetchProducts } from "../../store/slices/productSlice";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,27 +12,15 @@ import "swiper/css/navigation";
 import { Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import CardProduct from "../cardProduct";
+import { useDispatch, useSelector } from "react-redux";
 
 const SwiperProducts = () => {
-  const [products, productsSet] = useState([]);
-  const [swiperRef, setSwiperRef] = useState(null);
-
-  async function getProducts() {
-    try {
-      const res = await fetch("http://localhost:3000/products");
-      const jsonData = await res.json();
-      productsSet(jsonData);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  const listOfTopi = products.filter((e) => e.category === "topi");
-  const listOfPants = products.filter((e) => e.category === "celana");
+  const dispatch = useDispatch();
+  const { status, products, error } = useSelector((state) => state.products);
 
   useEffect(() => {
-    getProducts();
-  }, []);
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
   return (
     <Swiper
@@ -46,11 +35,11 @@ const SwiperProducts = () => {
           spaceBetween: 20,
         },
         768: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 40,
         },
         1024: {
-          slidesPerView: 5,
+          slidesPerView: 4,
           spaceBetween: 50,
         },
       }}
