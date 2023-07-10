@@ -15,7 +15,6 @@ export default function Checkout() {
   const dispatch = useDispatch();
   const { status, products, error } = useSelector((state) => state.products);
   const [item, setItem] = React.useState(true);
-
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
