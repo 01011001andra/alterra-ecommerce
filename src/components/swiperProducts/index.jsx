@@ -25,6 +25,13 @@ const SwiperProducts = () => {
   return (
     <Swiper
       slidesPerView={1}
+      style={{
+        backgroundColor: "#fbfbfb",
+        padding: "20px",
+        display: "flex",
+        flexDirection: "column-reverse",
+        gap: "20px",
+      }}
       spaceBetween={10}
       pagination={{
         clickable: true,
@@ -46,6 +53,7 @@ const SwiperProducts = () => {
       modules={[Pagination]}
       className="mySwiper"
     >
+      <h3>Produk Lainnya</h3>
       {products?.map((e, i) => {
         return (
           <SwiperSlide>
