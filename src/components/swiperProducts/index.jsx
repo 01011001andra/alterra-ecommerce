@@ -54,7 +54,7 @@ const SwiperProducts = () => {
       className="mySwiper"
     >
       <h3>Produk Lainnya</h3>
-      {products?.map((e, i) => {
+      {products.products?.map((e, i) => {
         return (
           <SwiperSlide>
             <Link

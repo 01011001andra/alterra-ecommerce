@@ -7,3 +7,7 @@
 .card-body:hover {
   background-color: aliceblue;
 }
+
+.card-img-top {
+  height: 200px;
+}
