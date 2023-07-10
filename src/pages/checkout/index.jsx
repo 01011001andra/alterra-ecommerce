@@ -14,11 +14,11 @@ import { Link } from "react-router-dom";
 export default function Checkout() {
   const dispatch = useDispatch();
   const { status, products, error } = useSelector((state) => state.products);
-  const [item, setItem] = React.useState(false);
+  const [item, setItem] = React.useState(true);
 
   useEffect(() => {
     dispatch(fetchProducts());
-  }, [dispatch, products]);
+  }, [dispatch]);
 
   let ifEmpty = (
     <div className="w-100">
@@ -41,12 +41,12 @@ export default function Checkout() {
       </div>
       <div className="cards d-flex flex-column justify-center p-4 ">
         <h4>Rekomendasi untuk Kamu</h4>
-        <div className="d-flex flex-wrap gap-5">
+        <div className="row">
           {products?.map((e, i) => {
             return (
               <Link
                 to={`/products/${e.id}`}
-                className="text-decoration-none"
+                className="text-decoration-none col-12 col-sm-6 col-md-4 col-lg-3"
                 key={i}
               >
                 <CardProduct product={e} />
@@ -125,7 +125,7 @@ export default function Checkout() {
           <div className="checkout_items col-12 col-lg-7 d-flex flex-column gap-4">
             {leftContent}
           </div>
-          <div className="checkout_price col-12 col-lg-4 h-100  sticky-top">
+          <div className="checkout_price col-12 col-lg-4 h-100 sticky-top">
             {rightContent}
           </div>
           <SwiperProducts />

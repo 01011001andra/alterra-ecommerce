@@ -1,6 +1,6 @@
 .card-product {
   cursor: pointer;
-  max-width: 15rem;
+  flex: auto;
   width: 100%;
 }
 
