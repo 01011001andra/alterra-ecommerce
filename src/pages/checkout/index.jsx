@@ -42,14 +42,14 @@ export default function Checkout() {
       <div className="cards d-flex flex-column justify-center p-4 ">
         <h4>Rekomendasi untuk Kamu</h4>
         <div className="row">
-          {products?.map((e, i) => {
+          {products.products?.map((e, i) => {
             return (
               <Link
                 to={`/products/${e.id}`}
                 className="text-decoration-none col-12 col-sm-6 col-md-4 col-lg-3"
                 key={i}
               >
-                <CardProduct product={e} />
+                <CardProduct product={e} button={true} />
               </Link>
             );
           })}
