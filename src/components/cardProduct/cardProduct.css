@@ -1,7 +1,7 @@
 .card-product {
   cursor: pointer;
-  flex: auto;
   width: 100%;
+  flex: auto;
 }
 
 .card-body:hover {

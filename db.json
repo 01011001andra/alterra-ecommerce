@@ -4,54 +4,61 @@
       "id": 2,
       "name": "nike",
       "desc": "Unisex Sportswear Bucket Hat",
-
-      "url": "src/assets/topi.jpeg",
-
+      "url": "/assets/topi.jpeg",
       "category": "topi",
-      "price": 120000
+      "price": 120000,
+      "rate": 5,
+      "details": "Polo shirt bergaya casual sangat cocok buat aktivitas sehari-hari - Warna New Navy - Bordir logo di dada - Detail kerah yang Unik - Unlined / line - Regular fit - Kancing depan 2 Baris - Material katun tidak transparan, ringan dan tidak stretch - Cocok untuk Acara Semi Formal maupun Casual - Tinggi model 185 cm, lingkar dada 98 cm, Model mengenakan ukuran M Warna pada gambar dapat sedikit berbeda dengan warna asli produk akibat pencahayaan saat proses photoshoot. SKU XPM025"
     },
     {
       "id": 3,
       "name": "adidas",
       "desc": "adicolor classics 3-stripes leggings",
-      "url": "src/assets/market.png",
+      "url": "/assets/market.png",
       "category": "celana",
-      "price": 220000
+      "price": 220000,
+      "rate": 5,
+      "details": "Polo shirt bergaya casual sangat cocok buat aktivitas sehari-hari - Warna New Navy - Bordir logo di dada - Detail kerah yang Unik - Unlined / line - Regular fit - Kancing depan 2 Baris - Material katun tidak transparan, ringan dan tidak stretch - Cocok untuk Acara Semi Formal maupun Casual - Tinggi model 185 cm, lingkar dada 98 cm, Model mengenakan ukuran M Warna pada gambar dapat sedikit berbeda dengan warna asli produk akibat pencahayaan saat proses photoshoot. SKU XPM025"
     },
     {
       "id": 4,
       "name": "Converse",
       "desc": "Chuck Taylor 70's - Hi",
-      "url": "src/assets/sepatu.jpeg",
-
+      "url": "/assets/sepatu.jpeg",
       "category": "sepatu",
-      "price": 100000
+      "price": 100000,
+      "rate": 5,
+      "details": "Polo shirt bergaya casual sangat cocok buat aktivitas sehari-hari - Warna New Navy - Bordir logo di dada - Detail kerah yang Unik - Unlined / line - Regular fit - Kancing depan 2 Baris - Material katun tidak transparan, ringan dan tidak stretch - Cocok untuk Acara Semi Formal maupun Casual - Tinggi model 185 cm, lingkar dada 98 cm, Model mengenakan ukuran M Warna pada gambar dapat sedikit berbeda dengan warna asli produk akibat pencahayaan saat proses photoshoot. SKU XPM025"
     },
     {
       "id": 211,
       "name": "TONIQUE",
       "desc": "Osella Ladies Comme Solid Shirt Indigo",
-      "url": "src/assets/market.png",
+      "url": "/assets/market.png",
       "category": "baju",
-      "price": 120022200
+      "price": 120022200,
+      "rate": 5,
+      "details": "Polo shirt bergaya casual sangat cocok buat aktivitas sehari-hari - Warna New Navy - Bordir logo di dada - Detail kerah yang Unik - Unlined / line - Regular fit - Kancing depan 2 Baris - Material katun tidak transparan, ringan dan tidak stretch - Cocok untuk Acara Semi Formal maupun Casual - Tinggi model 185 cm, lingkar dada 98 cm, Model mengenakan ukuran M Warna pada gambar dapat sedikit berbeda dengan warna asli produk akibat pencahayaan saat proses photoshoot. SKU XPM025"
     },
     {
       "id": 5,
       "name": "Converse",
       "desc": "Chuck Taylor 70's - Hi",
-      "url": "src/assets/sepatu.jpeg",
-
+      "url": "/assets/sepatu.jpeg",
       "category": "sepatu",
-      "price": 100000
+      "price": 100000,
+      "rate": 5,
+      "details": "Polo shirt bergaya casual sangat cocok buat aktivitas sehari-hari - Warna New Navy - Bordir logo di dada - Detail kerah yang Unik - Unlined / line - Regular fit - Kancing depan 2 Baris - Material katun tidak transparan, ringan dan tidak stretch - Cocok untuk Acara Semi Formal maupun Casual - Tinggi model 185 cm, lingkar dada 98 cm, Model mengenakan ukuran M Warna pada gambar dapat sedikit berbeda dengan warna asli produk akibat pencahayaan saat proses photoshoot. SKU XPM025"
     },
     {
       "id": 6,
       "name": "Converse",
       "desc": "Chuck Taylor 70's - Hi",
-      "url": "src/assets/sepatu.jpeg",
-
+      "url": "/assets/sepatu.jpeg",
       "category": "sepatu",
-      "price": 100000
+      "price": 100000,
+      "rate": 5,
+      "details": "Polo shirt bergaya casual sangat cocok buat aktivitas sehari-hari - Warna New Navy - Bordir logo di dada - Detail kerah yang Unik - Unlined / line - Regular fit - Kancing depan 2 Baris - Material katun tidak transparan, ringan dan tidak stretch - Cocok untuk Acara Semi Formal maupun Casual - Tinggi model 185 cm, lingkar dada 98 cm, Model mengenakan ukuran M Warna pada gambar dapat sedikit berbeda dengan warna asli produk akibat pencahayaan saat proses photoshoot. SKU XPM025"
     }
   ]
 }

@@ -4,9 +4,9 @@ import {
   Home,
   Login,
   Products,
-  Register
+  Register,
+  DetailProduct
 } from "./pages";
-import DetailProduct from "./pages/detailproduct";
 
 const router = createBrowserRouter([
   {

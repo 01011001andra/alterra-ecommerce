@@ -19,8 +19,8 @@ export default function Products() {
         <div className="row">
           <div className="col-12">PRODUCTS</div>
         </div>
-        <div className="row d-flex justify-center row-gap-3 ">
-          {products?.map((e, i) => {
+        <div className="row d-flex justify-center row-gap-3">
+          {products.products?.map((e, i) => {
             return (
               <Link
                 to={`/products/${e.id}`}

@@ -1,12 +1,11 @@
 import React from "react";
-import gmb from "../../assets/sepatu.jpeg";
 
-const ImageDetail = ({image = ""}) => {
+const ImageDetail = ({ images = [] }) => {
   return (
     <div className="row">
       <div className="col-8">
         <img
-          src={gmb}
+          src={images[0]}
           className="img-fluid rounded mx-auto d-block w-100 "
           alt="gambar produk"
         />
@@ -15,14 +14,14 @@ const ImageDetail = ({image = ""}) => {
         <div className="row h-100 row-gap-3">
           <div className="col-12">
             <img
-              src={gmb}
+              src={images[1]}
               className="img-fluid rounded mx-auto d-block w-100 h-100"
               alt="gambar produk"
             />
           </div>
           <div className="col-12">
             <img
-              src={gmb}
+              src={images[2]}
               className="img-fluid rounded mx-auto d-block w-100 h-100"
               alt="gambar produk"
             />

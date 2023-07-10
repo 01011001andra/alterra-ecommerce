@@ -12,7 +12,7 @@ const DescDetail = ({ product = {} }) => {
 
   return (
     <div className="">
-      <h2 className="fw-normal m-0">{product.name}</h2>
+      <h2 className="fw-normal m-0">{product.title}</h2>
       
       <div className="d-flex gap-2 flex-wrap mb-3">
         <p className="d-flex align-items-center flex-wrap m-0">
