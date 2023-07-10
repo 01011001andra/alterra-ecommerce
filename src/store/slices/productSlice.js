@@ -3,6 +3,7 @@ import axios from "axios";
 
 const initialState = {
   products: [],
+  productsById: {},
   status: "idle",
   error: null,
 };
@@ -10,10 +11,18 @@ const initialState = {
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
-    const response = await axios.get("http://localhost:3000/products");
+    const response = await axios.get('https://dummyjson.com/products');
     return response.data;
   }
 );
+
+export const fetchProductById = createAsyncThunk(
+  "products/fetchProductById",
+  async (id) => {
+    const response = await axios.get(`https://dummyjson.com/products/${id}`)
+    return response.data
+  }
+)
 
 export const productsSlice = createSlice({
   name: "products",
@@ -31,7 +40,20 @@ export const productsSlice = createSlice({
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
+      })
+      .addCase(fetchProductById.pending, (state, action) => {
+        state.status = "loading";
+      })
+      .addCase(fetchProductById.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        // Add any fetched posts to the array
+        state.productsById = action.payload;
+      })
+      .addCase(fetchProductById.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
       });
+      
   },
 });
 
