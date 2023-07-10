@@ -20,11 +20,11 @@ export default function Products() {
           <div className="col-12">PRODUCTS</div>
         </div>
         <div className="row d-flex justify-center row-gap-3">
-          {products?.map((e, i) => {
+          {products.products?.map((e, i) => {
             return (
               <Link
                 to={`/products/${e.id}`}
-                className="col-6 col-sm-4 col-lg-3 text-decoration-none"
+                className="col-6 col-sm-4 col-lg-3 text-decoration-none "
                 key={i}
               >
                 <CardProduct product={e} />

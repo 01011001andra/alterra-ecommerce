@@ -1,47 +1,30 @@
 import React from "react";
+import "./styles.css";
+import { MdOutlineClose } from "react-icons/md";
 
 const CardItems = () => {
+
   return (
-    <section style="background-color: #eee;">
-      <div class="container py-5">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6 col-xl-4">
-            <div class="card text-black">
-              <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/3.webp"
-                class="card-img-top"
-                alt="Apple Computer"
-              />
-              <div class="card-body">
-                <div class="text-center">
-                  <h5 class="card-title">Believing is seeing</h5>
-                  <p class="text-muted mb-4">Apple pro display XDR</p>
-                </div>
-                <div>
-                  <div class="d-flex justify-content-between">
-                    <span>Pro Display XDR</span>
-                    <span>$5,999</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>Pro stand</span>
-                    <span>$999</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>Vesa Mount Adapter</span>
-                    <span>$199</span>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between total font-weight-bold mt-4">
-                  <span>Total</span>
-                  <span>$7,197.00</span>
-                </div>
-              </div>
+    <div className="card_items w-100 p-4">
+      <div className="d-flex gap-3">
+        <img src="src/assets/topi.jpeg" alt="topi" className="w-25" />
+        <div className="d-flex flex-column justify-content-between w-100 gap-5">
+          <div className="d-flex flex-column gap-2">
+            <div className="d-flex justify-content-between">
+              <span className="fs-6">All Star</span>
+              <MdOutlineClose size={25} />
+            </div>
+            <span>Pegasus 40 Topi</span>
+            <span>Ukuran: EU 44</span>
+            <div className="mt-2 d-flex gap-4  align-items-center w-50">
+              <span className="p-3">-</span>
+              <span className="border px-3 px-lg-4">3</span>
+              <span className="p-3">+</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

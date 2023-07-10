@@ -237,5 +237,5 @@ export default function Home() {
         </Carousel>
       </div> */}
     </Layout>
-  )
+  );
 }
