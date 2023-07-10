@@ -24,7 +24,7 @@ export default function Products() {
             return (
               <Link
                 to={`/products/${e.id}`}
-                className="col-6 col-sm-4 col-lg-3 text-decoration-none"
+                className="col-6 col-sm-4 col-lg-3 text-decoration-none "
                 key={i}
               >
                 <CardProduct product={e} />
