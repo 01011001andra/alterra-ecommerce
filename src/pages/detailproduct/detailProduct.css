@@ -1,3 +1,7 @@
+.container-detail{
+    min-height: calc(100vh - 48px);
+}
+
 .btn-addToCart{
     display: none;
 }

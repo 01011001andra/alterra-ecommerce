@@ -22,13 +22,12 @@ export default function Products() {
         <div className="row d-flex justify-center row-gap-3">
           {products.products?.map((e, i) => {
             return (
-              <Link
-                to={`/products/${e.id}`}
+              <div
                 className="col-6 col-sm-4 col-lg-3 text-decoration-none "
                 key={i}
               >
                 <CardProduct product={e} />
-              </Link>
+              </div>
             );
           })}
         </div>
