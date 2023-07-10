@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { Layout } from '../layout'
+import React, { useEffect, useState } from "react";
+import { Layout } from "../layout";
 // import Carousel from 'bootstrap'
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../store/slices/productSlice";
-import './home.css'
+import "./home.css";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -137,7 +137,11 @@ export default function Home() {
           {slideProducts.map((product) => (
             <div key={product.id} className="col-md-3">
               <div className="card product-card border-0">
-                <img className="card-img-top image" src={product.url} alt={product.name} />
+                <img
+                  className="card-img-top image"
+                  src={product.url}
+                  alt={product.name}
+                />
                 <div className="card-body">
                   <h5 className="card-title">{product.name}</h5>
                   <p className="card-text description">{product.desc}</p>
@@ -158,13 +162,19 @@ export default function Home() {
   return (
     <Layout>
       <div class="d-flex justify-content-center">
-        <div class="content" style={{ width: '996px' }}>
-          <div className='big-banner-wrapper mb-5'>
-            <h4 className='text-center mb-4 fw-bold'>ZALORA 7.7 Sale: Shop Now!</h4>
-            <img src="https://images.ctfassets.net/9q8du028z7sn/7IAouA7HFVRSXpYg7fM8Hp/78d6ebd51a2d5cb04aa6f0f325d0908c/996x500_HERO___10_.jpg" class="img-fluid rounded mx-auto d-block" alt="Responsive image"></img>
+        <div class="content" style={{ width: "996px" }}>
+          <div className="big-banner-wrapper mb-5">
+            <h4 className="text-center mb-4 fw-bold">
+              ZALORA 7.7 Sale: Shop Now!
+            </h4>
+            <img
+              src="https://images.ctfassets.net/9q8du028z7sn/7IAouA7HFVRSXpYg7fM8Hp/78d6ebd51a2d5cb04aa6f0f325d0908c/996x500_HERO___10_.jpg"
+              class="img-fluid rounded mx-auto d-block"
+              alt="Responsive image"
+            ></img>
           </div>
-          <div className='post-banner-wrapper mb-5'>
-            <Carousel className='custom-carousel rounded' interval={4000}>
+          <div className="post-banner-wrapper mb-5">
+            <Carousel className="custom-carousel rounded" interval={4000}>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
@@ -195,8 +205,10 @@ export default function Home() {
               </Carousel.Item>
             </Carousel>
           </div>
-          <div className='recommended-wrapper'>
-            <h4 className='text-center mb-4 fw-bold'>Kamu Mungkin Suka Produk Ini</h4>
+          <div className="recommended-wrapper">
+            <h4 className="text-center mb-4 fw-bold">
+              Kamu Mungkin Suka Produk Ini
+            </h4>
             <Carousel interval={null} indicators={false}>
               {slides}
             </Carousel>

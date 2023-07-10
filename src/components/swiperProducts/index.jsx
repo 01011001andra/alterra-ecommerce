@@ -62,7 +62,7 @@ const SwiperProducts = () => {
               className="col-6 col-sm-4 col-lg-3 text-decoration-none "
               key={i}
             >
-              <CardProduct product={e} />
+              <CardProduct product={e} button={true} />
             </Link>
           </SwiperSlide>
         );
