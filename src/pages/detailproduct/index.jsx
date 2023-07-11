@@ -20,7 +20,7 @@ export default function DetailProduct() {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container-detail">
         <div className="row row-gap-3">
           <div className="col-12 col-md-6 col-lg-8">
             <ImageDetail images={productsById.images} />

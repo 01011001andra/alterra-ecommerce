@@ -4,27 +4,33 @@ import ButtonAddToCart from "../../components/buttonToCart";
 
 const DescDetail = ({ product = {} }) => {
   function formatRupiah(angka = 0) {
-    return angka.toLocaleString("id-ID", {
+    return angka.toLocaleString("en-US", {
       style: "currency",
-      currency: "IDR",
+      currency: "USD",
     });
   }
+
+  const rate = Math.round(product.rating)
+
+  console.log(product)
+
 
   return (
     <div className="">
       <h2 className="fw-normal m-0">{product.title}</h2>
-      
       <div className="d-flex gap-2 flex-wrap mb-3">
         <p className="d-flex align-items-center flex-wrap m-0">
-          {product.desc}
+          {product.category} ~ {product.brand}
         </p>
-        <div>|</div>
+        <div style={{color:"gray"}}>|</div>
         <div className="d-flex align-items-center">
-          {[...Array(5)].map((e, i) => {
+          {[...Array(rate)].map((e, i) => {
             return <BsFillStarFill key={i} color="yellow" />;
           })}
         </div>
       </div>
+
+      <p>Stok : {product.stock}</p>
 
       <p className="fs-2">
         <strong> {formatRupiah(product.price)} </strong>
@@ -38,14 +44,7 @@ const DescDetail = ({ product = {} }) => {
       <div>
         <h5>Rincian</h5>
         <p>
-          Polo shirt bergaya casual sangat cocok buat aktivitas sehari-hari -
-          Warna New Navy - Bordir logo di dada - Detail kerah yang Unik -
-          Unlined / line - Regular fit - Kancing depan 2 Baris - Material katun
-          tidak transparan, ringan dan tidak stretch - Cocok untuk Acara Semi
-          Formal maupun Casual - Tinggi model 185 cm, lingkar dada 98 cm, Model
-          mengenakan ukuran M Warna pada gambar dapat sedikit berbeda dengan
-          warna asli produk akibat pencahayaan saat proses photoshoot. SKU
-          XPM025
+          {product.description}
         </p>
       </div>
 
