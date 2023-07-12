@@ -22,6 +22,7 @@
   -webkit-line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #262626;
 }
 
 .product-card .image {
@@ -38,4 +39,21 @@
   /* height: 200px; */
   /* Ubah sesuai dengan ukuran yang diinginkan */
   object-fit: cover;
+}
+
+.card-button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card-title {
+  color: #000 !important;
+}
+
+.card-title {
+  color: #000 !important;
+}
+
+.card-price {
+  color: #262626;
 }
