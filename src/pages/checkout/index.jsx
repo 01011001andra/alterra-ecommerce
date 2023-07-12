@@ -142,7 +142,7 @@ export default function Checkout() {
   return (
     <Layout>
       {!carts.length == 0 ? (
-        <div className="row justify-contenet-between mb-5">
+        <div className="row justify-content-between mb-5">
           <div className="checkout_items col-12 col-lg-7 d-flex flex-column gap-4">
             {leftContent}
           </div>
