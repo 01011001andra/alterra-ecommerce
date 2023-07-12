@@ -1,0 +1,59 @@
+.custom-carousel {
+  /* width: 500px; */
+  /* Atur lebar sesuai kebutuhan */
+  /* height: 300px; */
+  /* Atur tinggi sesuai kebutuhan */
+  /* margin: 0 auto; */
+  /* Untuk membuat Carousel berada di tengah */
+  /* max-width: 100%; */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* .product-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.product-card .description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #262626;
+}
+
+.product-card .image {
+  width: 220px;
+  /* Ubah sesuai dengan ukuran yang diinginkan */
+  height: 317px;
+  /* Ubah sesuai dengan ukuran yang diinginkan */
+  /* object-fit: contain; */
+  display: block;
+  margin: 0 auto;
+  /* Mengatur margin kiri dan kanan ke auto */
+  /* width: 200px; */
+  /* Ubah sesuai dengan ukuran yang diinginkan */
+  /* height: 200px; */
+  /* Ubah sesuai dengan ukuran yang diinginkan */
+  object-fit: cover;
+}
+
+.card-button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card-title {
+  color: #000 !important;
+}
+
+.card-title {
+  color: #000 !important;
+}
+
+.card-price {
+  color: #262626;
+}

@@ -1,13 +1,12 @@
-import Navbar from '../../components/navbar';
-import Footer from '../../components/footer';
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 
-
-export const Layout = ({ children }) => {
+export const Layout = ({ children, classname }) => {
   return (
     <>
       <Navbar />
-      <div>{children}</div>
+      <div className={`container-xxl px-4 py-5 ${classname}`}>{children}</div>
       <Footer />
     </>
-  )
-}
+  );
+};
