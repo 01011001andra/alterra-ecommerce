@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { PiBrandyFill } from "react-icons/pi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
+  const { carts } = useSelector((state) => state.carts);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-xl">
@@ -35,8 +38,17 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <Link to="/checkout" className="navbar-text">
-            <AiOutlineShoppingCart size={35} />
+          <Link
+            to="/checkout"
+            className="navbar-text text-decoration-none relative"
+          >
+            <AiOutlineShoppingCart size={35} className="" />
+            <span
+              className="bg-dark text-light rounded-fill px-2 "
+              style={{ borderRadius: "100%" }}
+            >
+              {carts.length}
+            </span>
           </Link>
         </div>
       </div>
