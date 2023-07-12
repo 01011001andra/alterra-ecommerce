@@ -4,161 +4,18 @@ import { Layout } from "../layout";
 import Carousel from "react-bootstrap/Carousel";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../store/slices/productSlice";
-import "./home.css";
+import './home.css'
+import { Link } from 'react-router-dom';
+import SwiperProducts from '../../components/swiperProducts';
 
 export default function Home() {
   const dispatch = useDispatch();
   const { status, products, error } = useSelector((state) => state.products);
 
-  console.log(products);
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  // const [test, testSet] = useState([]);
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, [])
-
-  // const fetchData = async () => {
-  //   try {
-  //     const request = await fetch(`${window.location.origin}/`)
-  //   } catch(error) {
-
-  //   }
-  // }
-
-  // const products = [
-  //   {
-  //     id: 1,
-  //     title: 'Product 1',
-  //     description: 'Description 1',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Product 2',
-  //     description: 'Description 2',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'Product 3',
-  //     description: 'Description 3',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   }
-  // ];
-  // const products = [
-  //   {
-  //     id: 1,
-  //     title: 'Product 1',
-  //     description: 'Description 1',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Product 2',
-  //     description: 'Description 2',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'Product 3',
-  //     description: 'Description 3',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 4,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'Product 4',
-  //     description: 'Description 4',
-  //     image: 'https://dynamic.zacdn.com/_gNomlUcF63pEgXuo7wSJ0MKeTE=/fit-in/346x500/filters:fill(ffffff):quality(90)/https://static-id.zacdn.com/p/berrybenka-label-5274-2792862-1.jpg'
-  //   },
-  //   // Tambahkan produk lainnya sesuai kebutuhan
-  // ];
-
-  const itemsPerSlide = 4;
-
-  const slides = [];
-  for (let i = 0; i < products.length; i += itemsPerSlide) {
-    const slideProducts = products.slice(i, i + itemsPerSlide);
-
-    const slide = (
-      <Carousel.Item key={i}>
-        <div className="row">
-          {slideProducts.map((product) => (
-            <div key={product.id} className="col-md-3">
-              <div className="card product-card border-0">
-                <img
-                  className="card-img-top image"
-                  src={product.url}
-                  alt={product.name}
-                />
-                <div className="card-body">
-                  <h5 className="card-title">{product.name}</h5>
-                  <p className="card-text description">{product.desc}</p>
-                  <h6 className="card-price">${`${product.price}`}</h6>
-                </div>
-                <button className="btn btn-outline-secondary">
-                  Masukkan Tas
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Carousel.Item>
-    );
-
-    slides.push(slide);
-  }
   return (
     <Layout>
       <div class="d-flex justify-content-center">
@@ -205,49 +62,14 @@ export default function Home() {
               </Carousel.Item>
             </Carousel>
           </div>
-          <div className="recommended-wrapper">
-            <h4 className="text-center mb-4 fw-bold">
-              Kamu Mungkin Suka Produk Ini
-            </h4>
-            <Carousel interval={null} indicators={false}>
-              {slides}
-            </Carousel>
-            {/* <div>
-              <button onClick={handlePrev} disabled={activeSlide === 0}>
-                Prev
-              </button>
-              <button onClick={handleNext} disabled={activeSlide === totalSlides - 1}>
-                Next
-              </button>
-            </div> */}
+          <div className='recommended-wrapper'>
+            {/* <h4 className='text-center mb-4 fw-bold'>Kamu Mungkin Suka Produk Ini</h4> */}
+            <div className="row">
+            </div>
+            <SwiperProducts />
           </div>
         </div>
       </div>
-      {/* <div className='home-wrapper'>
-        <Carousel indicators={false} slide={true} style={{ width: '100%' }} className='custom-carousel'>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://images.ctfassets.net/9q8du028z7sn/7rpjAud1Jh7QZGgU8hpgV/8fece43fb2f162d6213ad6e3de1b07b3/996x150_TETAPMELAYANIANDA_30A.jpg"
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://images.ctfassets.net/9q8du028z7sn/7rpjAud1Jh7QZGgU8hpgV/8fece43fb2f162d6213ad6e3de1b07b3/996x150_TETAPMELAYANIANDA_30A.jpg"
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://images.ctfassets.net/9q8du028z7sn/7rpjAud1Jh7QZGgU8hpgV/8fece43fb2f162d6213ad6e3de1b07b3/996x150_TETAPMELAYANIANDA_30A.jpg"
-              alt="Third slide"
-            />
-          </Carousel.Item>
-        </Carousel>
-      </div> */}
     </Layout>
   );
 }
