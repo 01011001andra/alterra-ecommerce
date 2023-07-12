@@ -9,12 +9,19 @@ export const cartsSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, { payload }) => {
-      let sample = [...state.carts];
-      sample.push(payload);
-      state.carts = sample;
+      const itemInCart = state.carts.find((item) => item.id === payload.id);
+
+      if (itemInCart) {
+        itemInCart.quantity++;
+      } else {
+        state.carts.push({ ...payload, quantity: 1 });
+      }
+    },
+    removeCart: (state) => {
+      state.carts = [];
     },
   },
 });
 
-export const { addToCart } = cartsSlice.actions;
+export const { addToCart, removeCart } = cartsSlice.actions;
 export default cartsSlice.reducer;
