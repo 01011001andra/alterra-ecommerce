@@ -10,10 +10,12 @@ import CardItems from "./card-checkout";
 import { MdShoppingCartCheckout } from "react-icons/md";
 import CardProduct from "../../components/cardProduct";
 import { Link } from "react-router-dom";
+import { removeCart } from "../../store/slices/cartSlice";
 
 export default function Checkout() {
   const dispatch = useDispatch();
   const { status, products, error } = useSelector((state) => state.products);
+  const { carts } = useSelector((state) => state.carts);
   const [item, setItem] = React.useState(true);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export default function Checkout() {
           </div>
           <div className="d-flex justify-content-center">
             <Link
-              to="/"
+              to="/products"
               className="belanja_button border-0 py-3 px-5 rounded text-decoration-none"
             >
               Ayo Belanja!
@@ -39,17 +41,14 @@ export default function Checkout() {
           </div>
         </div>
       </div>
-      <div className="cards d-flex flex-column justify-center p-4 ">
+      <div className="cards d-flex flex-column justify-center p-4">
         <h4>Rekomendasi untuk Kamu</h4>
         <div className="row">
           {products.products?.map((e, i) => {
             return (
-              <CardProduct
-                product={e}
-                button={true}
-                classnameLink="col-12 col-sm-6 col-md-4 col-lg-3"
-                key={i}
-              />
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={i}>
+                <CardProduct product={e} button={true} />
+              </div>
             );
           })}
         </div>
@@ -83,7 +82,29 @@ export default function Checkout() {
             </p>
           </div>
         </div>
-        <CardItems />
+        {!carts.length == 0 && (
+          <button
+            className="btn btn-dark"
+            onClick={() => {
+              dispatch(removeCart());
+            }}
+          >
+            Hapus Semua Daftar Belanja
+          </button>
+        )}
+        {carts?.map((item) => {
+          // console.log(item.);
+          return (
+            <CardItems
+              link={item.id}
+              brand={item.brand}
+              category={item.category}
+              price={item.price}
+              image={item?.images[0]}
+              quantity={item.quantity}
+            />
+          );
+        })}
       </div>
     </>
   );
@@ -93,7 +114,7 @@ export default function Checkout() {
       <h5>Jumlah Pesanan</h5>
       <div className="pesanan w-100 p-3 d-flex flex-column">
         <div className="d-flex justify-content-between pb-2">
-          <h6>Subtotal (2 produk)</h6>
+          <h6>Subtotal ({carts.length})</h6>
           <h6>Rp 1.599.000</h6>
         </div>
         <div className="borderY d-flex flex-column py-2 pb-3 gap-1">
@@ -117,9 +138,10 @@ export default function Checkout() {
       </div>
     </div>
   );
+
   return (
     <Layout>
-      {item ? (
+      {!carts.length == 0 ? (
         <div className="row justify-contenet-between mb-5">
           <div className="checkout_items col-12 col-lg-7 d-flex flex-column gap-4">
             {leftContent}

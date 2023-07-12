@@ -17,11 +17,12 @@ export const cartsSlice = createSlice({
         state.carts.push({ ...payload, quantity: 1 });
       }
     },
+    increaseProduct: (state, { payload }) => {},
     removeCart: (state) => {
       state.carts = [];
     },
   },
 });
 
-export const { addToCart, removeCart } = cartsSlice.actions;
+export const { addToCart, removeCart, increaseProduct } = cartsSlice.actions;
 export default cartsSlice.reducer;

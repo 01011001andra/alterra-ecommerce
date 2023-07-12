@@ -10,7 +10,7 @@ const DescDetail = ({ product = {} }) => {
     });
   }
 
-  const rate = Math.round(product.rating) || []
+  const rate = Math.round(product.rating) || [];
 
   return (
     <div className="">
@@ -19,7 +19,7 @@ const DescDetail = ({ product = {} }) => {
         <p className="d-flex align-items-center flex-wrap m-0">
           {product.category} ~ {product.brand}
         </p>
-        <div style={{color:"gray"}}>|</div>
+        <div style={{ color: "gray" }}>|</div>
         <div className="d-flex align-items-center">
           {[...Array(rate)]?.map((e, i) => {
             return <BsFillStarFill key={i} color="yellow" />;
@@ -33,18 +33,14 @@ const DescDetail = ({ product = {} }) => {
         <strong> {formatRupiah(product.price)} </strong>
       </p>
 
-
       <div className="btn-addToCart mb-3">
-        <ButtonAddToCart text={"Masukan ke keranjang"} />
+        <ButtonAddToCart text={"Masukan ke keranjang"} product={product} />
       </div>
 
       <div>
         <h5>Rincian</h5>
-        <p>
-          {product.description}
-        </p>
+        <p>{product.description}</p>
       </div>
-
     </div>
   );
 };

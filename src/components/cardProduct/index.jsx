@@ -38,7 +38,7 @@ const CardProduct = ({ product = {}, button = true, classnameLink }) => {
         <ButtonAddToCart
           product={product}
           text={"add to cart"}
-          className="btn btn-outline-primary w-100"
+          className="btn btn-outline-primary"
         >
           Add To Cart
         </ButtonAddToCart>
