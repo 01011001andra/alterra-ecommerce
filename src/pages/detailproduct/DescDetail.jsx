@@ -10,10 +10,7 @@ const DescDetail = ({ product = {} }) => {
     });
   }
 
-  const rate = Math.round(product.rating)
-
-  console.log(product)
-
+  const rate = Math.round(product.rating) || []
 
   return (
     <div className="">
@@ -24,7 +21,7 @@ const DescDetail = ({ product = {} }) => {
         </p>
         <div style={{color:"gray"}}>|</div>
         <div className="d-flex align-items-center">
-          {[...Array(rate)].map((e, i) => {
+          {[...Array(rate)]?.map((e, i) => {
             return <BsFillStarFill key={i} color="yellow" />;
           })}
         </div>
