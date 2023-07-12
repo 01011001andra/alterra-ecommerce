@@ -17,7 +17,11 @@ export const cartsSlice = createSlice({
         state.carts.push({ ...payload, quantity: 1 });
       }
     },
-    increaseProduct: (state, { payload }) => {},
+    increaseProduct: (state, { payload }) => {
+      const itemInCarts = state.carts.find((item) => item.id === payload.id);
+      console.log(payload);
+      console.log(itemInCarts);
+    },
     removeCart: (state) => {
       state.carts = [];
     },

@@ -35,7 +35,7 @@ const CardItems = ({ brand, category, price, image, quantity, link }) => {
                 className="p-3 fs-4"
                 role="button"
                 onClick={() => {
-                  return dispatch(increaseProduct());
+                  return dispatch(increaseProduct(increaseProduct(1)));
                 }}
               >
                 +
