@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import "./cardProduct.css";
+import ButtonAddToCart from "../buttonToCart";
 
 const CardProduct = ({ product = {}, button = true }) => {
   function formatRupiah(angka) {
-    return angka.toLocaleString("id-ID", {
+    return angka.toLocaleString("en-US", {
       style: "currency",
-      currency: "IDR",
+      currency: "USD",
     });
   }
 
@@ -30,7 +31,7 @@ const CardProduct = ({ product = {}, button = true }) => {
         </div>
       </Link>
       {button && (
-        <button className="btn btn-outline-primary w-100">Add To Cart</button>
+        <ButtonAddToCart product={product} text={"add to cart"} className="btn btn-outline-primary w-100">Add To Cart</ButtonAddToCart>
       )}
     </div>
   );

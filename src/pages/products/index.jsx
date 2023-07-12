@@ -3,7 +3,7 @@ import { Layout } from "../layout";
 import CardProduct from "../../components/cardProduct";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts } from "../../store/slices/productSlice";
+import { fetchProducts, removeDetail } from "../../store/slices/productSlice";
 
 export default function Products() {
   const dispatch = useDispatch();
@@ -11,6 +11,7 @@ export default function Products() {
 
   useEffect(() => {
     dispatch(fetchProducts());
+    dispatch(removeDetail());
   }, [dispatch]);
 
   return (
