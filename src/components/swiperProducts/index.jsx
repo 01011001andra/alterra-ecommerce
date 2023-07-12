@@ -56,14 +56,12 @@ const SwiperProducts = () => {
       <h3>Produk Lainnya</h3>
       {products.products?.map((e, i) => {
         return (
-          <SwiperSlide>
-            <Link
-              to={`/products/${e.id}`}
-              className="col-6 col-sm-4 col-lg-3 text-decoration-none "
-              key={i}
-            >
-              <CardProduct product={e} button={true} />
-            </Link>
+          <SwiperSlide key={i}>
+            <CardProduct
+              product={e}
+              button={true}
+              classnameLink="col-6 col-sm-4 col-lg-3"
+            />
           </SwiperSlide>
         );
       })}

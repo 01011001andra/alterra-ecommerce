@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import "./cardProduct.css";
 import ButtonAddToCart from "../buttonToCart";
 
-const CardProduct = ({ product = {}, button = true }) => {
+const CardProduct = ({ product = {}, button = true, classnameLink }) => {
+  // console.log(product.id);
   function formatRupiah(angka) {
     return angka.toLocaleString("en-US", {
       style: "currency",
@@ -11,8 +12,11 @@ const CardProduct = ({ product = {}, button = true }) => {
   }
 
   return (
-    <div className="card card-product box-hover mx-auto p-2">
-      <Link to={`/products/${product.id}`} className="text-decoration-none">
+    <div className="card card-product box-hover mx-auto p-2 ">
+      <Link
+        to={`/products/${product.id}`}
+        className={`${classnameLink} text-decoration-none w-100`}
+      >
         <img
           src={product.thumbnail}
           className="card-img-top img-product"
@@ -31,7 +35,13 @@ const CardProduct = ({ product = {}, button = true }) => {
         </div>
       </Link>
       {button && (
-        <ButtonAddToCart product={product} text={"add to cart"} className="btn btn-outline-primary w-100">Add To Cart</ButtonAddToCart>
+        <ButtonAddToCart
+          product={product}
+          text={"add to cart"}
+          className="btn btn-outline-primary w-100"
+        >
+          Add To Cart
+        </ButtonAddToCart>
       )}
     </div>
   );

@@ -15,6 +15,7 @@ export default function Checkout() {
   const dispatch = useDispatch();
   const { status, products, error } = useSelector((state) => state.products);
   const [item, setItem] = React.useState(true);
+
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
@@ -43,13 +44,12 @@ export default function Checkout() {
         <div className="row">
           {products.products?.map((e, i) => {
             return (
-              <Link
-                to={`/products/${e.id}`}
-                className="text-decoration-none col-12 col-sm-6 col-md-4 col-lg-3"
+              <CardProduct
+                product={e}
+                button={true}
+                classnameLink="col-12 col-sm-6 col-md-4 col-lg-3"
                 key={i}
-              >
-                <CardProduct product={e} button={true} />
-              </Link>
+              />
             );
           })}
         </div>
